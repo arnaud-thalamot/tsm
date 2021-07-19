@@ -1,0 +1,20 @@
+COMMmethod  tcpip
+TCPPort  <%= @TSM_Port%>
+TCPBuffsize  32
+TCPWindowsize   63
+TCPNodelay  yes
+Largecommbuffer  yes
+Passwordaccess  generate
+errorlogretention  7
+schedmode  prompted
+Schedlogretention  7
+MANAGEDSERVICES WEBCLIENT 
+Quiet
+Httpport  10581
+Tcpclientport  10581
+nodename  <%= @VM_Hostname%>
+TCPServeraddress  <%= @TSM_IP%>
+errorlogname  C:\Program Files\Tivoli\tsm\config\dsmerror_inc.log 
+schedlogname  C:\Program Files\Tivoli\tsm\config\dsmsched_inc.log 
+domain  ALL-LOCAL  
+SNAPSHOTPROVIDERFS  VSS
